@@ -1,0 +1,790 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+li {
+    list-style: none;
+}
+
+.ecwo-wrapper {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    padding: 30px 15px 0;
+}
+
+.ecwo-inner {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.ecwo-mt-30 {
+    margin-top: 30px;
+}
+
+.ecwo-action-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+[hidden], template {
+    display: none;
+}
+
+/*====================  Begin Button Styling ====================*/
+
+.ecwo-btns-container,
+.ecwo-main-actions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-right: 30px;
+}
+
+.ecwo-btn,
+.ecwo-main-action-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 48px;
+    width: 50%;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 400;
+    outline: none;
+    padding: 12px 15px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.ecwo-btn+.ecwo-btn,
+.ecwo-main-action-item+.ecwo-main-action-item {
+    margin-left: 12px;
+}
+
+.ecwo-btn-primary,
+.ecwo-main-action-item.ecwo-active {
+    background-color: #3e58e1;
+    color: #fff;
+}
+
+.ecwo-btn-primary:hover,
+.ecwo-main-action-item.ecwo-active:hover {
+    background-color: #293b96;
+}
+
+.ecwo-btn-primary-outline,
+.ecwo-main-action-item {
+    background: none;
+    border-color: #3e58e1;
+    color: #3e58e1;
+}
+
+.ecwo-btn-primary-outline:hover,
+.ecwo-main-action-item:hover {
+    background-color: #3e58e1;
+    color: #fff;
+}
+
+.ecwo-btn-gray {
+    background-color: #5B6987;
+    color: #fff;
+}
+
+.ecwo-btn-gray:hover {
+    transform: scale(.9);
+    -webkit-transform: scale(.9);
+    -moz-transform: scale(.9);
+    -ms-transform: scale(.9);
+    -o-transform: scale(.9);
+}
+
+.ecwo-btn-icon {
+    margin-right: 12px;
+    font-size: 1.1rem;
+}
+
+.ecwo-btn-reset {
+    display: none;
+}
+
+.ecwo-active .ecwo-btn-reset {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+/*====================  Begin Button Styling ====================*/
+
+
+
+/*====================  Begin Scroll Bar Styling ====================*/
+
+::-webkit-scrollbar {
+    width: 0.6rem;
+    background-color: #e2e3e9;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #c6c8d2;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #9fa1ad;
+}
+
+/*====================  End Scroll Bar Styling ====================*/
+
+
+/*====================  Begin First Section Styling ====================*/
+
+.ecwo-column-settings {
+    width: 40%;
+    background-color: #f8f8f8;
+}
+
+/* .ecwo-column-preview {
+    width: calc(100% - 40%);
+    background-color: #fff;
+} */
+
+.ecwo-column-section-inner {
+    /* padding: 60px 40px 40px; */
+    padding: 60px 0 40px 40px;
+}
+
+.ecwo-main-actions {
+    margin-bottom: 50px;
+}
+
+.ecwo-switch-contents {
+    max-height: 500px;
+    overflow-y: scroll;
+    padding-left: 5px;
+    padding-right: 30px;
+}
+
+.ecwo-switch-contents-wrap {
+    width: 100%;
+    overflow: hidden;
+}
+
+.ecwo-switch-contents-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 400%;
+}
+
+.ecwo-switch-content {
+    width: 25%;
+    padding: 0px 4px;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -webkit-transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -moz-transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -ms-transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -o-transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ecwo-templates-container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.ecwo-template-item {
+    position: relative;
+    width: calc(100% / 2 - 6px);
+    height: 262px;
+    background: #E5E5E5;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
+    color: #000;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.ecwo-template-name {
+    position: relative;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 0 0 8px 8px;
+    -webkit-border-radius: 0 0 8px 8px;
+    -moz-border-radius: 0 0 8px 8px;
+    -ms-border-radius: 0 0 8px 8px;
+    -o-border-radius: 0 0 8px 8px;
+}
+
+.ecwo-template-label {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ecwo-template-img {
+    max-width: 100%;
+    height: 221px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 8px 8px 0 0;
+    -webkit-border-radius: 8px 8px 0 0;
+    -moz-border-radius: 8px 8px 0 0;
+    -ms-border-radius: 8px 8px 0 0;
+    -o-border-radius: 8px 8px 0 0;
+}
+
+.ecwo-template-item-img-inner {
+    max-width: 100%;
+    height: 221px;
+}
+
+.ecwo-template-img-bg {
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 8px 8px 0 0;
+    -webkit-border-radius: 8px 8px 0 0;
+    -moz-border-radius: 8px 8px 0 0;
+    -ms-border-radius: 8px 8px 0 0;
+    -o-border-radius: 8px 8px 0 0;
+}
+
+.ecwo-template-item:hover {
+    -webkit-box-shadow: 0 6px 10px rgba(0, 0, 0, .15);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, .15);
+}
+
+.ecwo-template-active {
+    /* border: 1px solid #3e58e1; */
+    -webkit-box-shadow: 0 0 0 2px #3e58e1 !important;
+            box-shadow: 0 0 0 2px #3e58e1 !important;
+}
+
+/*====================  End First Section Styling ====================*/
+
+
+
+/*====================  Begin Second Section Styling ====================*/
+
+/* .ecwo-preview-email-wrapper {
+    width: calc(100% - 60px);
+    margin: 50px auto 20px;
+    padding: 20px;
+} */
+
+/* .ecwo-preview-email-container {
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #dedede;
+    color: var(--ecwo-color-text);
+    font-family: var(--ecwo-font-family);
+} */
+
+.ecwo-edit-row-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+/*====================  End Second Section Styling ====================*/
+
+
+
+/*====================  Begin Color Picker Spectrum Styling ====================*/
+
+.ecwo-color-picker {
+    height: 40px;
+    width: 168px;
+}
+
+.ecwo-color-picker .sp-original-input-container {
+    margin: 0px;
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.ecwo-color-picker .sp-original-input-container .sp-colorize-container {
+    position: absolute;
+    left: 10px;
+    top: 7px;
+    width: 27px !important;
+    height: 27px !important;
+    border: none !important;
+    border-radius: 4px !important;
+    -webkit-border-radius: 4px !important;
+    -moz-border-radius: 4px !important;
+    -ms-border-radius: 4px !important;
+    -o-border-radius: 4px !important;
+}
+
+.ecwo-color-picker .sp-original-input-container input {
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey !important;
+    cursor: default !important;
+    color: grey;
+    font-size: 14px;
+    padding-left: 46px;
+    outline: none !important;
+    border-radius: 5px !important;
+    -webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    -ms-border-radius: 5px !important;
+    -o-border-radius: 5px !important;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.ecwo-color-picker .sp-original-input-container input:hover {
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.12);
+}
+
+.ecwo-color-picker .sp-original-input-container input:focus {
+    border: 2px solid #3e58e1 !important;
+}
+
+/*====================  End Color Picker Spectrum Styling ====================*/
+
+
+
+/*====================  Begin Input Styling ====================*/
+
+.ecwo-edit-row {
+    position: relative;
+    margin-bottom: 36px;
+}
+
+.ecwo-label {
+    margin-bottom: 16px;
+}
+
+.ecwo-field {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: calc(2.875rem + 2px);
+    font-size: 1rem;
+    border: 1px solid #A8A8A8;
+    caret-color: #3E58E1;
+    outline: none;
+    /*padding: 1rem 1.625rem;
+    */padding: 0 24px 0 8px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.ecwo-field:hover {
+    color: #293b96 !important;
+}
+
+.ecwo-field:focus {
+    border-color: #3e58e1 !important;
+    color: #293b96 !important;
+    -webkit-box-shadow: 0 0 0 1px #3e58e1 !important;
+            box-shadow: 0 0 0 1px #3e58e1 !important;
+}
+
+.ecwo-field-custom-textarea {
+    height: 126px;
+    font-size: 13px;
+    padding: 16px 14px;
+    resize: none;
+}
+
+/*====================  End Input Styling ====================*/
+
+
+
+/*====================  Begin Upload Styling ====================*/
+
+.ecwo-upload-area {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: #e5e5e5;
+    color: #8f8a8a;
+    border: 1px solid #9f9f9f;
+    margin-top: 16px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.ecwo-icon-upload {
+    font-size: 50px;
+}
+
+.ecwo-head {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.ecwo-logo {
+    height: 43px;
+    margin-top: 20px;
+}
+
+.ecwo-preview-inner {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.ecwo-preview-img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.ecwo-active .ecwo-preview-inner {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.ecwo-file-name {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #5B6987;
+    color: #fff;
+    cursor: default;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 10px;
+    border-radius: 0 0 8px 8px;
+    -webkit-border-radius: 0 0 8px 8px;
+    -moz-border-radius: 0 0 8px 8px;
+    -ms-border-radius: 0 0 8px 8px;
+    -o-border-radius: 0 0 8px 8px;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.ecwo-upload-area.ecwo-active:hover .ecwo-file-name,
+.ecwo-upload-area.ecwo-active:hover .ecwo-cancel-upload {
+    display: block;
+}
+
+.ecwo-cancel-upload {
+    display: none;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: #5B6987;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+/*====================  End Upload Styling ====================*/
+
+
+
+/*====================  Begin Preview Styling ====================*/
+
+.ecwo-header {
+    /*background-color: var(--ecwo-color-primary);*/
+    padding: 50px 35px 50px;
+    
+}
+
+.ecwo-header h1,
+.ecwo-preview-email-container h2 {
+    margin: 0;
+}
+
+.ecwo-header h1 {
+    color: var(--ecwo-color-text);
+    font-size: 30px;
+}
+
+.ecwo-preview-email-container h2 {
+    color: var(--ecwo-color-primary);
+    font-size: 18px;
+}
+
+.ecwo-preview-content {
+    padding: 35px;
+}
+
+.ecwo-link {
+    color: var(--ecwo-color-primary);
+    text-decoration: underline;
+}
+
+/*====================  End Preview Styling ====================*/
+
+
+
+/*====================  End ECWO Loader Styling ====================*/
+
+.ecwo-loader {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 5;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.ecwo-loader.ecwo-show {
+    opacity: 1;
+    pointer-events: auto;
+} 
+
+.ecwo-loader .ecwo-loader-ring {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 45px;
+    width: 45px;
+    /* border: 5px solid #ddd; */
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.ecwo-loader .ecwo-loader-ring::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 5px solid #3e58e1;
+    border-top-color: transparent;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    animation: rotate 1.5s linear infinite;
+    -webkit-animation: rotate 1.5s linear infinite;
+}
+
+@-webkit-keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+
+/*====================  End ECWO Loader Styling ====================*/
+
+
+
+/*====================  Begin ECWO Alert Styling ====================*/
+
+.ecwo-alert {
+    position: relative;
+    padding: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-right: 30px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.ecwo-alert-success {
+    color: #0f5132;
+    background-color: #d1e7dd;
+    border-color: #badbcc;
+}
+
+.ecwo-alert-error {
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+}
+
+/*====================  End ECWO Alert Styling ====================*/
+
+
+
+/*====================  Begin Media Queries ====================*/
+
+@media (max-width: 1300px) {
+    .ecwo-column-section-inner {
+        /* padding: 60px 30px 40px; */
+        padding: 60px 0 40px 30px;
+    }
+    .ecwo-btn-icon {
+        margin-right: 6px;
+    }
+}
+
+/*====================  End Media Queries ====================*/
+ 

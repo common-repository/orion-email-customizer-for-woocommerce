@@ -1,0 +1,50 @@
+(function ($) {
+	'use strict';
+
+	$(document).ready(function () {
+// Function to trigger the add of a new font file after the click on the button "Add font file"
+		$(document).on("click", ".o-add-font-file", function (e) {
+			e.preventDefault();
+			var uploader = wp.media({
+				title: 'Please set the picture',
+				button: {
+					text: "Select picture(s)"
+				},
+				multiple: false
+			})
+				.on('select', function () {
+					var selection = uploader.state().get('selection');
+					selection.map(
+						function (attachment) {
+							attachment = attachment.toJSON();
+							var new_rule_index = $(".font_style_table tbody tr").length;
+							var font_tpl = $("#ecwo-font-tpl").val();
+							var tpl = font_tpl.replace(/{index}/g, new_rule_index);
+							$('.font_style_table tbody').prepend(tpl);
+							$('#file_data_' + new_rule_index).find("input[type=hidden]").val(attachment.id);
+							$('#file_data_' + new_rule_index).parent().find(".media-name").html(attachment.filename);
+						}
+					);
+				})
+				.open();
+		});
+
+		// Function to trigger the removal of a font file after the click on the button "Remove"
+		$(document).on("click", ".o-remove-font-file", function (e) {
+			e.preventDefault();
+			$(this).parent().find("input[type=hidden]").val("");
+			$(this).parent().parent().find(".media-name").html("");
+			$(this).parent().parent().remove();
+		});
+
+		//Function to trigger the change of a font file after the click on the button "Update"
+		$(document).on('change', '#font', function () {
+			var name = $('#font  option:selected').text();
+			var url = $('#font   option:selected').val();
+			$('.font_auto_name').val(name);
+			$('.font_auto_url').val(url);
+
+		});
+	});
+})(jQuery);
+

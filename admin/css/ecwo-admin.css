@@ -1,0 +1,22 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+ .font_style_table{
+    width: 100%;
+    border: 1px solid #DFD8D8;
+    margin-top: 10px;
+    border-spacing: 0;
+}
+.font_style_table thead{
+    border-bottom:1px solid #DFD8D8;
+}
+.font_style_table th{
+    width: 33%;
+    padding: 8px 0px;
+    border-bottom: 1px solid #DFD8D8;
+    border-right: 1px solid #DFD8D8;
+}
+td[id ^="file_data"]{
+    text-align:center;
+}
